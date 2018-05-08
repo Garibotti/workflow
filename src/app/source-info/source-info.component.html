@@ -1,0 +1,57 @@
+
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>-->
+<h4> Headers e Limites </h4>
+<div class="col-lg-12">
+	<legend class="section">
+	  Númerico
+	</legend>
+	<form>
+	  <span class="slider-warning">
+	    <input class="js-slider" id="slider-ex11" data-slider-id='ex11Slider'
+	           type="text" data-slider-min="0" data-slider-max="2000"
+	           data-slider-step="1" data-slider-value="[200,1547]"/>
+	  </span>
+			<fieldset>
+				<legend class="section">
+				  Data
+				</legend>	 
+				  <div class="topContainer">
+				    <div class="form-group left-div">  
+				      <datetime [timepicker]="false" [(ngModel)]="dateInicial" name="datetime" id="dateInicial"></datetime>
+				    </div>	
+
+					<div class="form-group right-div">  
+						<datetime [timepicker]="false" [(ngModel)]="dateFinal" name="datetime" id="dateFinal"></datetime>
+					</div>
+				  </div>
+
+				<legend class="section">
+				  Headers
+				</legend>
+		            <div class="form-group row">
+		              <label class="control-label col-form-label col-md-4" for="multiple-select">
+		                Headers
+		                <span class="help-block">
+		                  Com busca
+		                </span>
+		              </label>
+		              <div class="controls col-md-8">
+		                <select2 id="multiple-select"
+		                         class="select-block-level chzn-select"
+		                         [data]="getSelect2CountryList()" [width]="'100%'" [options]="{theme: 'bootstrap', multiple: true}">
+		                </select2>
+		              </div>
+		            </div>
+
+
+			  </fieldset> 
+	   <!-- <div class="form-group">  
+	      <datetime [timepicker]="false" [(ngModel)]="dateInicial" name="datetime" id="dateInicial"></datetime>
+	    </div>
+	    <div class="form-group">  
+	      <datetime [timepicker]="false" [(ngModel)]="dateFinal" name="datetime" id="dateFinal"></datetime>
+	    </div>
+    </fieldset>-->
+
+	</form>
+</div>
